@@ -167,4 +167,4 @@ if st.button("Analyser le sentiment"):
 
 # Pied de page
 st.markdown("---")
-st.markdown("Développé avec ❤️ par [Votre Nom]") 
+st.markdown("Développé avec ❤️ par Mane Sidibe & Abiatou Badji") 
