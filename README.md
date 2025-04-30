@@ -13,7 +13,7 @@ Cette application permet d'analyser le sentiment des tweets en utilisant un mod�
 
 1. Clonez le dépôt :
 ```bash
-git clone https://github.com/Rimka33/sentiment_app.git
+git clone https://github.com/sidibemane/sentiment_app
 cd sentiment_app
 ```
 
@@ -22,6 +22,9 @@ cd sentiment_app
 pip install -r requirements.txt
 ```
 
+```bash
+venv\Scripts\activate
+```
 ## Utilisation
 
 Lancez l'application avec :

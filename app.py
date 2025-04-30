@@ -11,14 +11,39 @@ import os
 
 # Configuration de la page
 st.set_page_config(
-    page_title="Analyse de Sentiment des Tweets",
-    page_icon="📊",
-    layout="wide"
+    page_title="Analyseur de Sentiment Twitter",
+    page_icon="🔍",  # Icône de loupe pour l'analyse
+    layout="wide",
+    initial_sidebar_state="expanded"
 )
 
-# Titre de l'application
-st.title("📊 Analyse de Sentiment des Tweets")
+st.markdown("""
+    <style>
+        .main {background-color: #f8f9fa;}
+        h1 {color: #1DA1F2;}
+        .stTextInput>div>div>input {border: 2px solid #1DA1F2;}
+        .icon-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+        }
+    </style>
+""", unsafe_allow_html=True)
 
+col1, col2 = st.columns([1, 3])
+with col1:
+    st.markdown("""
+    <div class="icon-container">
+        <svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 24 24" fill="#1DA1F2">
+            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm4.59-12.42L10 14.17l-2.59-2.58L6 13l4 4 8-8z"/>
+        </svg>
+    </div>
+    """, unsafe_allow_html=True)
+    
+with col2:
+    st.title("Analyseur de Sentiment des Tweets")
+    st.caption("Détection avancée des émotions dans les publications Twitter")
 # Chargement des données
 @st.cache_data
 def load_data():
